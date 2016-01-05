@@ -52,12 +52,38 @@ Header Styles
     padding-top:2px;
 }
 
+.header-logo-wrapper {
+    float: left;
+    width: 34px;
+    margin-right: 5px;
+}
+
+.header-logo-wrapper img {
+    width: 100%;
+}
+
+.map-logo-wrapper {
+    width: 100px;
+    position: absolute;
+    bottom: 23px;
+    right: 0;
+    padding: 0 10px;
+    background: rgb(100, 100, 100);
+    background: rgba(100, 100, 100, .3);
+    z-index: 100;
+}
+
+.map-logo-wrapper img {
+    width: 100%;
+}
+
 /*
 Footer Styles
 */
 #footer {
     background: #a1bbd0;
     color: #fff;
+    min-height: 23px;
 }
 
 #footer a {
@@ -125,7 +151,7 @@ Phone Portrait
 */
 @media (max-width: 480px) {
     #titleBar {
-        font-size: .6em;
+        font-size: .9em;
         text-align: center;
     }
 
@@ -141,8 +167,20 @@ Phone Portrait
         width: 90px;
     }
 
+    #map {
+	padding-bottom: 0 !important;
+    }
+
     #footer {
-        font-size: 7pt;
+	display: none;
+    }
+
+    .map-logo-wrapper {
+	bottom: 0;
+    }
+
+    #header .hidden-phone-portrait, #header .olControlScaleBar, #header .olControlPanZoomBar {
+	display: none;
     }
 }
 

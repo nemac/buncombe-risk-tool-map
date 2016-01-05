@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta name="description" content="Interactive map viewer for Land of Sky.">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="shortcut icon" href="icons/unca.ico" type="image/vnd.microsoft.icon"/>
 	<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 
@@ -48,20 +48,14 @@
     <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="libs/seldon/seldon-ie.css" />
     <![endif]-->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-44767748-3', 'gro-wnc.org');
-	  ga('send', 'pageview');
-	</script>
   </head>
 
   <body>
 
     <div id="titleBar">
+      <a href="https://nemac.unca.edu" class="header-logo-wrapper">
+	<img src="icons/nemac_logo_small.png" title="UNC Asheville's NEMAC logo" alt="UNC Asheville's NEMAC logo"/>
+      </a>
       <h2>Buncombe County Multi-Hazard Risk Tool</h2>
     </div>
 
@@ -112,23 +106,25 @@
         <strong>Theme:</strong><select id="themeCombo"></select>
       </div> -->
 	 
-	 <div id="hazardTheme" class="header-bar input input-select">
-		<strong>Exposure Report:</strong><select id="hazardCombo">
-			<option value=null">Select</option>
-			<option value="#sumScreenContainerf">Flood</option>
-			<option value="#sumScreenContainer">Wildfire</option>
-			<option value="#sumScreenContainerl">Landslide</option>
-		</select>
-		</div>
+      <div id="hazardTheme" class="header-bar input input-select">
+	<strong>Exposure Report:</strong><select id="hazardCombo">
+	  <option value="null">Select</option>
+	  <option value="#sumScreenContainerf">Flood</option>
+	  <option value="#sumScreenContainer">Wildfire</option>
+	  <option value="#sumScreenContainerl">Landslide</option>
+	</select>
+      </div>
 	  	 		
     </div>
 
-	<div id="map"></div>
+    <div id="map"></div>
+
+    <div class="map-logo-wrapper">
+      <img src="icons/nemac_logo_400.png" title="UNC Asheville's NEMAC logo" alt="UNC Asheville's NEMAC logo"/>
+    </div>
 	
     <div id="footer">      
-      <div id="links">
-        
-	 </div>
+      <div id="links"></div>
       <div id="latLonTracker" class="hidden-phone-portrait hidden-phone-landscape hidden-tablet-portrait"></div>
     </div>
 	
@@ -170,6 +166,17 @@
 	<div id="dialog1">
 	<div id="dialog1Content"></div>
 	</div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72011952-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
  </body>
  
  <script>
